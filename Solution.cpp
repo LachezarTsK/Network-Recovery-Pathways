@@ -1,4 +1,5 @@
 
+#include <span>
 #include <queue>
 #include <limits>
 #include <ranges>
@@ -100,8 +101,8 @@ private:
                 }
                 minEdgeCost[next.node] = next.edgeCost;
                 minHeapForEdgeCost.emplace(next.node,
-                        min(next.edgeCost, current.minEdgeCostFromStart),
-                        (current.sumCostFromStart + next.edgeCost));
+                                           min(next.edgeCost, current.minEdgeCostFromStart),
+                                           (current.sumCostFromStart + next.edgeCost));
             }
         }
         return NO_PATH_FOUND;
