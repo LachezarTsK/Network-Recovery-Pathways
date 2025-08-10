@@ -1,6 +1,5 @@
 
 package main
-
 import (
     "container/heap"
     "math"
@@ -99,10 +98,9 @@ func findPathWithScoreNotLessThanMinTargetEdgeCost(minTargetEdgeCost int, maxSum
                 break
             }
             minEdgeCost[next.node] = next.edgeCost
-            heap.Push(&minHeapForEdgeCost,
-                NewStep(next.node, 
-                        min(next.edgeCost, current.minEdgeCostFromStart), 
-                        (current.sumCostFromStart + int64(next.edgeCost))))
+            heap.Push(&minHeapForEdgeCost,NewStep(next.node, 
+                                          min(next.edgeCost, current.minEdgeCostFromStart), 
+                                          (current.sumCostFromStart + int64(next.edgeCost))))
         }
     }
     return NO_PATH_FOUND
