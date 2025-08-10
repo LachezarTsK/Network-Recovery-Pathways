@@ -75,8 +75,8 @@ public class Solution {
                 }
                 minEdgeCost[next.node] = next.edgeCost;
                 minHeapForEdgeCost.add(new Step(next.node,
-                        Math.min(next.edgeCost, current.minEdgeCostFromStart),
-                        (current.sumCostFromStart + next.edgeCost)));
+                                       Math.min(next.edgeCost, current.minEdgeCostFromStart),
+                                       (current.sumCostFromStart + next.edgeCost)));
             }
         }
         return NO_PATH_FOUND;
