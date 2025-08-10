@@ -86,8 +86,10 @@ public class Solution
                 }
                 minEdgeCost[next.node] = next.edgeCost;
                 int minEdgeCostFromStart = Math.Min(next.edgeCost, current.minEdgeCostFromStart);
-                minHeapForEdgeCost.Enqueue(new Step(next.node, minEdgeCostFromStart, (current.sumCostFromStart + next.edgeCost)),
-                       minEdgeCostFromStart);
+                minHeapForEdgeCost.Enqueue(new Step(next.node, 
+                                           minEdgeCostFromStart, 
+                                           (current.sumCostFromStart + next.edgeCost)),
+                                           minEdgeCostFromStart);
             }
         }
         return NO_PATH_FOUND;
