@@ -74,13 +74,10 @@ class Solution {
                     break
                 }
                 minEdgeCost[next.node] = next.edgeCost
-                minHeapForEdgeCost.add(
-                    Step(
-                        next.node,
-                        min(next.edgeCost, current.minEdgeCostFromStart),
-                        (current.sumCostFromStart + next.edgeCost)
-                    )
-                )
+                minHeapForEdgeCost.add(Step(
+                                       next.node,
+                                       min(next.edgeCost, current.minEdgeCostFromStart),
+                                       (current.sumCostFromStart + next.edgeCost)))
             }
         }
         return NO_PATH_FOUND
