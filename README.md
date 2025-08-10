@@ -1,2 +1,2 @@
 # Network-Recovery-Pathways
-Challenge at LeetCode.com. Tags: Graph, Shortest Path, Dijkstra Search.
+Challenge at LeetCode.com. Tags: Graph, Heap, Shortest Path, Dijkstra Search.
