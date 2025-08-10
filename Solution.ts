@@ -63,8 +63,8 @@ function findPathWithScoreNotLessThanMinTargetEdgeCost(minTargetEdgeCost: number
             }
             minEdgeCost[next.node] = next.edgeCost;
             minHeapForEdgeCost.enqueue(new Step(next.node,
-                Math.min(next.edgeCost, current.minEdgeCostFromStart),
-                (current.sumCostFromStart + next.edgeCost)));
+                                       Math.min(next.edgeCost, current.minEdgeCostFromStart),
+                                       (current.sumCostFromStart + next.edgeCost)));
         }
     }
     return Util.NO_PATH_FOUND;
